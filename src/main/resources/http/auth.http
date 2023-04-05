@@ -1,0 +1,34 @@
+### Registration
+POST http://localhost:8080/auth/registration
+Content-Type: application/json
+
+{
+  "name": "Muzaffar",
+  "surname": "Muysinov",
+  "phone": "4545",
+  "password": "4545",
+  "email": "muysinovmuxsinbek9@gmail.com",
+  "photoId": "4ea03efc-b2a4-41cb-9658-3d0c88971755"
+}
+
+
+
+
+### Authorization user
+POST localhost:8080/auth/login
+Content-Type: application/json
+Accept-Language: EN
+
+{
+  "phone":"4545",
+  "password": "4545"
+}
+
+### Authorization Admin
+POST localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "phone": "0000",
+  "password": "0000"
+}

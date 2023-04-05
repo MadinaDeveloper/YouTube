@@ -1,0 +1,68 @@
+### Profile Create
+POST localhost:8080/profile/admin/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzE3MDY5MTEsInBob25lIjoiMDAwMCIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNjcxNzkzMzExLCJpc3MiOiJ5b3UgdHViZSB0ZXN0ICJ9.CHcLD9JMtxNng6HCKk0Od2ntVwYkaI1N-nlJKt1j4JlpfjGI4aanCALuWGgn3tLqFR9eRLuQmjrAcouN9t7dRA
+
+{
+  "name": "Alisa",
+  "surname": "ljsdfgladfj",
+  "phone": "8883399998",
+  "password": "333333333",
+  "role": "ROLE_MODERATOR"
+}
+
+
+
+### change paswword
+POST localhost:8080/profile/change
+Content-Type: application/json
+
+{
+  "oldPassword": "88888",
+  "newPassword": "99999"
+}
+
+
+
+### update user
+PUT http://localhost:8080/profile/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzE3MDk4NzcsInBob25lIjoiODg4ODgiLCJyb2xlIjoiUk9MRV9VU0VSIiwiZXhwIjoxNjcxNzk2Mjc3LCJpc3MiOiJ5b3UgdHViZSB0ZXN0ICJ9.3kO6IvFf7u0fcSFiCzPsYiifZs-FbRzhPI0mDmarV_uZUCcKSD3FpgiYL1NIvXjoqzna1K8C_v5O5bF3SGL7Bw
+
+{
+  "name": "Dakejon",
+  "surname": "Nurlanovic",
+  "phone": "88888",
+  "password": "99999",
+  "email": "boy.pacan@gmail.com"
+}
+
+####  update email
+#PUT http://localhost:8080/profile/update/email
+#Content-Type: application/json
+#
+#{
+#  ""
+#}
+### update
+PUT http://localhost:8080/profile/update/attach?id=85711ed8-8901-4382-ab27-833f56ba5f65
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzE4MjE1NDQsInBob25lIjoiNDU0NSIsInJvbGUiOiJST0xFX1VTRVIiLCJleHAiOjE2NzE5MDc5NDQsImlzcyI6InlvdSB0dWJlIHRlc3QgIn0.QasUdTbiKhaBMxzP61LAXYIEqxRn6fPmVzbwBQsh7nh5iTf5q74WgWadxVm_VqX-4dMTy1kYXaVLI18j_wQnPg
+
+
+
+
+#### Get List
+#GET localhost:8080/profile/admin/list?page=0&size=10
+#Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzE1MzAwODUsInBob25lIjoiMDAwMCIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNjcxNjE2NDg1LCJpc3MiOiJrdW51eiB0ZXN0IHBvcnRhbGkifQ.GBWSosSp43ovcZBTmwhQPoqRDYkz_6CdvLjhm6AsF1EdvS3zxE2eM3Bl7quCiH2lterU3KBCSjd78PsMvdpWQw
+#
+#
+#
+#### Profile Filter
+#POST localhost:8081/profile/filter?page=0&size=10
+#Content-Type: application/json
+#
+#{
+#  "name": "Gulom",
+#  "phone": "8888",
+#  "role": "ROLE_PUBLISHER"
+#}
